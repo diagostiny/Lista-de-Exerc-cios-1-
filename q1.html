@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questão 1</title>
+</head>
+<body>
+    <p id="texto">Este texto muda de cor.</p>
+    <button onclick="mudarCor('red')">Vermelho</button>
+    <button onclick="mudarCor('green')">Verde</button>
+    <button onclick="mudarCor('blue')">Azul</button>
+    <button onclick="mudarCor('yellow')">Amarelo</button>
+
+    <script>
+        function mudarCor(cor) {
+            document.getElementById("texto").style.color = cor;
+        }
+    </script>
+</body>
+</html>

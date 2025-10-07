@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questão 9</title>
+</head>
+<body>
+  
+<input type="text" id="p1" placeholder="Palavra 1">
+<input type="text" id="p2" placeholder="Palavra 2">
+<input type="text" id="intercalada" disabled>
+<button onclick="intercalar()">Intercalar</button>
+<script >
+function intercalar() {
+  let a = document.getElementById('p1').value;
+  let b = document.getElementById('p2').value;
+  let r = '';
+  for (let i = 0; i < Math.max(a.length, b.length); i++) {
+    if (a[i]) r += a[i];
+    if (b[i]) r += b[i];
+  }
+  document.getElementById('intercalada').value = r;
+}
+</script>
+</body>
+</html>

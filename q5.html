@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5</title>
+</head>
+<body>
+        <form id = "cadastro">
+            Login: <input type="text" id = "login" > <br>
+            Senha: <input type="password" id = "senha"> <i>*a senha deve conter entre 6 e 10 caracteres</i> <br>
+            Confirmar Senha: <input type="password" id = "confirmar"> <br>
+            <button type="button" onclick="validar()"> Cadastrar</button>
+        </form>
+
+        <script>
+            function validar(){
+            const login = document.getElementById("login").value;
+            const senha = document.getElementById("senha").value;
+            const confirmar = document.getElementById("confirmar").value;
+
+            if (!login || !senha || !confirmar) {
+                alert("Todos os campos devem ser preenchidos.");
+                return;
+            }
+            if (senha !== confirmar) {
+                alert("As senhas não coincidem.");
+                return;
+            }
+
+            if (senha.length <6 || senha.length > 10) {
+                alert("A senha deve ter entre 6 e 10 caracteres.");
+                return;
+            }
+        }
+        </script>
+</body>
+</html>

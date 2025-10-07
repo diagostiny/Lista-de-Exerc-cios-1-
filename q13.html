@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questão 13</title>
+</head>
+<body>
+  <input type="text" id="data" placeholder="dd/mm/aaaa">
+<button onclick="dataPorExtenso()">Converter</button>
+<p id="dataExtenso"></p>
+<script>
+function dataPorExtenso() {
+  const meses = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+  let valor = document.getElementById('data').value;
+  let partes = valor.split('/');
+  if (partes.length === 3) {
+    let extenso = `${partes[0]} de ${meses[parseInt(partes[1])-1]} de ${partes[2]}`;
+    document.getElementById('dataExtenso').textContent = extenso;
+  } else {
+    document.getElementById('dataExtenso').textContent = 'Data inválida!';
+  }
+}
+</script>  
+</body>
+</html>
